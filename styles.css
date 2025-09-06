@@ -1,11 +1,11 @@
 #frames-container {
-  height: 0px;
-  width: 0px;
+  height: 5px;
+  width: 5px;
   display: none;
 }
 
 .content-frame {
-  width: 0px;
-  height: 0px;
+  width: 5px;
+  height: 5px;
   display: none;
 }
