@@ -1,11 +1,27 @@
 #frames-container {
-  height: 5px;
-  width: 5px;
-  display: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 10px;
+  padding: 10px;
 }
 
 .content-frame {
-  width: 5px;
-  height: 5px;
-  display: none;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* keeps square shape */
+  background: #f4c542;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #222;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile optimization */
+@media (max-width: 600px) {
+  #frames-container {
+    grid-template-columns: repeat(5, 1fr); /* 5 frames per row on mobile */
+  }
 }
